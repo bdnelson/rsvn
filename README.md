@@ -35,7 +35,7 @@ The gem takes a minimial configuration.  Simply specify the authentication type
 * :basic - username and password is required
 
 In a Rails application, you should create an initializer for your Subversion 
-connection information (i.e. <pre>config/initializers/rsvn.rb</pre>).  
+connection information (i.e. `config/initializers/rsvn.rb`).  
 
 ### Anonymous Connection
 ```ruby
