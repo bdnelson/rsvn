@@ -1,6 +1,17 @@
 # Rsvn
 
+## Description
 Gem to provide basic access to Subversion information (wraps Ruby SVN bindings).
+It assumes standard Subversion usage is in effect (i.e. branches, tags, trunk) and
+only interacts with the repository in a read-only manner.  The gem was written
+to be used with Ruby on Rails, but can be used whereever it is needed. 
+
+## Why?
+I ran into this need a couple of times while working with deployment and build
+scripts and decided to roll the functionality up into a gem for easier use.
+
+## Requirements
+This gem depends on the SVN ruby bindings being installed.
 
 ## Installation
 
@@ -24,17 +35,17 @@ The gem takes a minimial configuration.  Simply specify the authentication type
 * :basic - username and password is required
 
 In a Rails application, you should create an initializer for your Subversion 
-connection information.  For example,
+connection information.  
 
-#### Anonymous Connection
+### Anonymous Connection
 ```ruby
 # No additional information is required.
 Rsvn::Config.authentication_method = :anonymous
 ```
 
-#### Basic Connection
+### Basic Authentication Connection
 ```ruby
-# Username and password
+# Username and password are required
 Rsvn::Config.authentication_method = :basic
 Rsvn::Config.username = 'username'
 Rsvn::Config.password = 'password'
@@ -42,16 +53,18 @@ Rsvn::Config.password = 'password'
 
 ## Usage
 
-### List available branches
+### Get Branches List
 
 ```ruby
-# Setup connection details
-Rsvn::Config.authentication_method = :anonymous
-
 # Get branches list
 branches = Rsvn.branches("http://svn.apache.org/repos/asf/subversion")
+```
 
-puts branches.inspect
+### Get Tags List
+
+```ruby
+# Get tags list
+tags = Rsvn.tags("http://svn.apache.org/repos/asf/subversion")
 ```
 
 ## Contributing
@@ -61,3 +74,7 @@ puts branches.inspect
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Links
+
+
