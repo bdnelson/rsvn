@@ -3,6 +3,8 @@ require "svn/client"
 
 require "rsvn/version"
 require "rsvn/config"
+
+require "rsvn/version_object"
 require "rsvn/branch"
 require "rsvn/tag"
 
