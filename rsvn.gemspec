@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Rsvn::VERSION
   gem.authors       = ["Brian D. Nelson"]
   gem.email         = ["bdnelson@bdnsolutions.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Gem to provide basic access to Subversion information (wraps Ruby SVN bindings).}
+  gem.summary       = %q{Gem to provide basic access to Subversion information (wraps Ruby SVN bindings).}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
