@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["bdnelson@bdnsolutions.com"]
   gem.description   = %q{Gem to provide basic access to Subversion information (wraps Ruby SVN bindings).}
   gem.summary       = %q{Gem to provide basic access to Subversion information (wraps Ruby SVN bindings).}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/bdnelson/rsvn"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
